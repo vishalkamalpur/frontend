@@ -1,0 +1,236 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif; /* Modern font for the overall design */
+  background-color: #f9f9f9;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevents any overflow */
+}
+
+/* Container for the login form and video */
+.login-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  max-width: 1240px;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transform: scale(1);
+  animation: fadeIn 1s ease-out; /* Smooth fade-in animation */
+}
+
+.login-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-left video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.7; /* Slightly faded to keep focus on the form */
+}
+
+.login-right {
+  flex: 1;
+  /* padding: 40px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  position: relative;
+  color: #333;
+  z-index: 1;
+  transform: translateY(20px);
+  animation: slideInRight 1s ease-out; /* Slide-in animation for the form */
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideInRight {
+  0% { transform: translateY(30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Form Box Styling */
+.form-box {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.9); /* Light background */
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+.form-box:hover {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
+  transform: translateY(-10px); /* Slight lift effect */
+}
+
+/* Title Styling */
+.title {
+  font-size: 34px;
+  color: #6c5ce7; /* Updated accent color */
+  font-weight: 700;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.title:hover {
+  color: #5e4ec8; /* Hover color for the title */
+}
+
+/* Subtitle Styling */
+.subtitle {
+  font-size: 16px;
+  color: #888;
+  margin-bottom: 25px;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+.subtitle:hover {
+  color: #6c5ce7; /* Hover effect for subtitle */
+}
+
+/* Input Field Styling */
+.form-box input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 20px; /* Increased margin for more spacing */
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  color: #333;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.form-box input:focus {
+  border-color: #6c5ce7; /* Focus color matches the accent color */
+  box-shadow: 0 0 8px rgba(108, 92, 231, 0.5); /* Soft glow effect */
+}
+
+.form-box input:hover {
+  border-color: #6c5ce7; /* Hover effect for inputs */
+}
+
+/* Button Styling */
+.form-box button {
+  width: 100%;
+  padding: 16px;
+  background-color: #6c5ce7; /* Button color matches the title accent */
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.form-box button:hover {
+  background-color: #5e4ec8; /* Darker shade on hover */
+  transform: translateY(-3px); /* Lift effect */
+  box-shadow: 0 5px 15px rgba(108, 92, 231, 0.3); /* Soft shadow effect */
+}
+
+.form-box button:active {
+  background-color: #4e3b98; /* Darker shade on click */
+  transform: translateY(2px); /* Slight push down effect */
+  box-shadow: 0 0 10px rgba(108, 92, 231, 0.6); /* Shadow effect on click */
+}
+
+/* User Role Dropdown Styling */
+.form-box select {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 20px; /* Space between User Role and next input fields */
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  color: #333;
+  outline: none;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.form-box select:focus {
+  border-color: #6c5ce7; /* Focus color matches the accent color */
+  box-shadow: 0 0 8px rgba(108, 92, 231, 0.5); /* Soft glow effect */
+}
+
+.form-box select:hover {
+  border-color: #6c5ce7; /* Hover effect for select input */
+}
+
+/* Toggle Link Styling */
+.toggle-link {
+  margin-top: 15px;
+  color: #6c5ce7;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.toggle-link:hover {
+  text-decoration: underline;
+  color: #5e4ec8; /* Slightly darker shade on hover */
+}
+
+/* Media Query for Smaller Devices */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    border-radius: 8px;
+  }
+
+  .login-left, .login-right {
+    width: 100%;
+    height: auto;
+  }
+
+  .form-box {
+    padding: 30px;
+  }
+
+  .form-box input,
+  .form-box button {
+    font-size: 14px;
+  }
+
+  .full-illustration {
+    height: 300px;
+    object-fit: contain;
+  }
+}

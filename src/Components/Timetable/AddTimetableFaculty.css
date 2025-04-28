@@ -1,0 +1,165 @@
+/* Allow full-page scroll */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-y: auto;
+  scroll-behavior: smooth; /* smooth scrolling */
+}
+
+/* Main container */
+.timetable-container {
+  padding: 80px 10px 20px;
+  background-color: #f0f4f8;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* gap between form and timetable */
+}
+
+/* Form Box (Add Timetable) */
+.form-box {
+  border-radius: 10px;
+  width: 100%;
+  max-width: 900px;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Header inside Form */
+.form-header {
+  background-color: #2979FF;
+  color: white;
+  text-align: center;
+  padding: 9px;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Form Fields */
+.form-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.form-fields > .MuiGrid-item {
+  flex: 1 1 45%;
+}
+
+/* Remove double border from input fields (Course, Teacher) */
+.MuiOutlinedInput-root {
+  border: none !important;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1); /* soft shadow */
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border: none !important;
+}
+
+/* Submit Button */
+.submit-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.submit-btn {
+  background-color: #2979FF !important;
+  padding: 6px 16px !important; /* Smaller padding */
+  font-weight: 600 !important; /* Slightly lighter bold */
+  font-size: 14px !important; /* Smaller font */
+  border-radius: 8px !important;
+  text-transform: none !important;
+  color: white !important;
+}
+
+.submit-btn:hover {
+  background-color: #1565c0 !important;
+}
+
+/* Faculty Timetable Box */
+.timetable-box {
+  width: 100%;
+  max-width: 1000px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 0px;
+  overflow-x: auto; /* side scroll if needed */
+}
+
+/* Table Header */
+.timetable-header {
+  background-color: #2979FF;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  font-size: 2px;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Timetable Table */
+.timetable-table {
+  width: 100%;
+  min-width: 700px;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.timetable-table th,
+.timetable-table td {
+  padding: 3px;
+  border: 1px solid #ddd;
+}
+
+.timetable-table thead th {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 2;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Upload Button */
+.upload-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px; /* slightly smaller margin */
+}
+
+.upload-btn {
+  background-color: #2979FF !important;
+  color: white !important;
+  border: none;
+  padding: 6px 16px; /* smaller padding */
+  font-weight: 600;
+  font-size: 14px; /* smaller font size */
+  border-radius: 6px;
+  cursor: pointer;
+  text-transform: none;
+}
+
+.upload-btn:hover {
+  background-color: #1565c0 !important;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .form-box, .timetable-box {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .form-fields > .MuiGrid-item {
+    flex: 1 1 100%;
+  }
+}

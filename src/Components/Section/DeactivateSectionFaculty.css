@@ -1,0 +1,28 @@
+.deactivate-section-container {
+    margin-top: 40px;
+  }
+  
+  .deactivate-section-paper {
+    padding: 30px;
+    border-radius: 12px;
+  }
+  
+  .form-title {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .form-subtitle {
+    text-align: center;
+    margin-bottom: 20px;
+    color: gray;
+  }
+  
+  .input-field {
+    margin-bottom: 20px;
+  }
+  
+  .deactivate-btn {
+    padding: 10px 30px;
+  }
+  

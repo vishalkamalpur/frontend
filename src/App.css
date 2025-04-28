@@ -1,0 +1,109 @@
+/* Global App Container */
+.App {
+  text-align: center;
+  font-family: 'Poppins', 'Inter', sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f3f4f6, #e0e7ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  color: #1e293b; /* slate-800 */
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* App Logo Animation */
+.App-logo {
+  height: 120px;
+  pointer-events: none;
+  transition: transform 0.4s ease;
+  animation: float 6s ease-in-out infinite;
+}
+
+.App-logo:hover {
+  transform: scale(1.05) rotate(3deg);
+}
+
+/* Only animate logo if motion is preferred */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: float 6s ease-in-out infinite;
+  }
+}
+
+/* Header Container */
+.App-header {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* Header Typography */
+.App-header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  color: #3b82f6; /* blue-500 */
+}
+
+.App-header p {
+  font-size: 1.1rem;
+  color: #64748b; /* slate-500 */
+  margin-bottom: 30px;
+}
+
+/* App Link Button Style */
+.App-link {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1rem;
+  color: white;
+  background: linear-gradient(135deg, #6366f1, #3b82f6);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.3);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.App-link:hover {
+  background: linear-gradient(135deg, #4f46e5, #2563eb);
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
